@@ -1,0 +1,37 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+<div class="jumbotron" style="margin-top: 100px;">
+    <h1 class="display-4">Single rooms</h1>
+    <div ><img style="width: 25%;height: 25%;" src="{%static 'images/single.jpeg'%}" alt=""></div>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">View</a>
+</div>
+<div class="jumbotron">
+    <h1 class="display-4">Double rooms</h1>
+    <div ><img style="width: 25%;height: 25%;" src="{%static 'images/car.jpg'%}" alt=""></div>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">View</a>
+</div>
+<div class="jumbotron">
+    <h1 class="display-4">Deluxe room</h1>
+    <div ><img style="width: 25%;height: 25%;" src="{%static 'images/deluxe.jpg'%}" alt=""></div>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">View</a>
+ </div>
+ <div class="jumbotron">
+    <h1 class="display-4">Family room</h1>
+    <div ><img style="width: 25%;height: 25%;" src="{%static 'images/family.jpg'%}" alt=""></div>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">View</a>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+<style>
+    .abt1 {
+        background-color: chocolate;
+        height: 300px;
+        width: 100%;
+        margin-top: 80px;
+    }
+
+</style>
+<div class="abt1">
+    <div class="text-center" style="padding-top: 80px;">
+        <h5 style="color: antiquewhite;font-weight: bolder;">Bookmyroom.</h5>
+        <h1 style="color: antiquewhite;font-weight: bolder;">ABOUT US</h1>
+    </div>
+</div>
+<div class="row">
+    <div style="margin: 30px 30px 30px 30px;" class="jumbotron col-lg-4">
+        <h1 style="font-weight: bolder;">Our <br>Mission</h1>
+        <p>OYO is a global platform that empowers entrepreneurs and small businesses with hotels and homes by providing
+            full stack technology that increases earnings and eases operations. Bringing affordable and trusted
+            accommodation that guests can book instantly.</p>
+    </div>
+    <div class="jumbotron-fluid col-lg-6"style="margin: 30px 10px 30px 30px;"><img style="width: 800px; height: 416px;" src="{%static 'images/aboutus1.jpg'%}"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width='device-width', initial-scale=1.0">
+  <title>Masterpage</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+
+  <!-- jquery       -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'static/css/master.css'%}">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <style>
+
+    .navbar {
+      background: rgba( 245, 240, 240, 1 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 5px );
+      -webkit-backdrop-filter: blur( 5px );
+      border-radius: 0px 0px 10px 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    #navbarColor02{
+      padding-left: 160px;
+    }
+
+    .collapse a {
+      float: right;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bolder;
+    }
+
+
+    .collapse a:hover {
+      background-color: #ddd;
+      color: black;
+      border-radius: 20px 20px 20px 20px;
+    }
+
+    #regb{margin-left: auto;
+    }
+    
+
+    .navbar-toggler{
+      width: 47px;
+      height: 34px;
+      background-color: black;
+      }
+
+    .navbar-toggler .line{
+        width: 100%;
+        float: left;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: 5px;
+      }
+
+
+
+
+    /* footer */
+
+    #button-addon1 {
+      color: #ffc371
+    }
+
+    i {
+      color: #0000cc;
+      font-size: 20px
+    }
+
+    .form-control::placeholder {
+      font-size: 0.95rem;
+      color: #aaa;
+      font-style: italic
+    }
+
+    .form-control.shadow-0:focus {
+      box-shadow: none
+    }
+
+    .display-3 {
+      font-family: 'Sanchez', serif
+    }
+
+    p {
+      font-family: 'Tajawal', sans-serif
+    }
+
+    .lead {
+      font-family: 'Sanchez 200', serif
+    }
+
+    /* login modal */
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar start -->
+  <nav class="navbar navbar-expand-lg fixed-top"> 
+    <a id="icon" href="{% url 'home' %}" class="navbar-brand" style="color: black;font-weight: bolder;">
+      <img src="{% static 'images/icon.png' %}" width="58px" height="58px">Bookmyroom.</a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"> 
+      <span class="line"></span> 
+      <span class="line"></span> 
+      <span class="line"></span> 
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul  class="navbar-nav">
+        <li><a href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a></li>
+        <li><a href="{% url 'stays' %}">OUR STAYS</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+        <li><a href="{% url 'aboutus' %}">ABOUT US</a></li>
+        <li></li>
+      </ul>
+      <!-- Trigger the modal with a button -->
+      <button class="btn btn-primary" type="button" id="regb" data-toggle="modal" data-target="#modalLRFormm">LogIn/Register></button>
+    </div>
+</nav>
+
+  <!-- navbar end -->
+
+
+
+
+
+  {% block content %}
+  {% endblock %}
+  <!-- footer start -->
+
+  <footer class="bg-white">
+    <div class="container py-5">
+      <div class="row py-3">
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">About</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Contact Us</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">About Us</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Stories</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Press</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Help</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Payments</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Shipping</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Cancellation</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Returns</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Policy</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Return Policy</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Terms Of Use</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Security</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Sitemap</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Our Products</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Registered Office Address</h6>
+          <p class="text-muted mb-4">Here , write the complete address of the Registered office address along with
+            telephone number.</p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i
+                  class="fab fa-2x fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i
+                  class="fab fa-2x fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i
+                  class="fab fa-2x fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i
+                  class="fab fa-2x fa-youtube"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i
+                  class="fab fa-2x fa-google"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="p-0 m-0 b-0">
+    <div class="bg-light py-2">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">© 2019 BBBootstrap All risghts reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+<!-- Modal: Login / Register Form -->
+<div class="modal fade" id="modalLRFormm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <center>
+          <ul class="nav nav-tabs md-tabs tabs-2" role="tablist" style="background-color: blue; padding: 10px;">
+            <li class="nav-item" style="width: 50%;">
+              <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+                Login</a>
+            </li>
+            <li class="nav-item" style="width: 50%;">
+              <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+                Register</a>
+            </li>
+          </ul>
+        </center>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form
