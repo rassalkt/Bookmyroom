@@ -9,3 +9,5 @@ def fnabtus (request):
     return render (request,'aboutus.html')
 def fnstays (request):
     return render (request,'ourstays.html')
+def fncalicut (request):
+    return render (request,'calicut.html')
